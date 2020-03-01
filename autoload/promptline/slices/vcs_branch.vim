@@ -17,6 +17,10 @@ fun! promptline#slices#vcs_branch#function_body(options)
         \'  return 0',
         \'}',
         \'function __promptline_vcs_branch {',
+        \'  if [ ! -z "$DISABLE_PROMPT_VCS_BRANCH" ]; then',
+        \'    return 1',
+        \'  fi',
+        \'',
         \'  local branch',
         \'  local branch_symbol="' . branch_symbol . '"']
 
